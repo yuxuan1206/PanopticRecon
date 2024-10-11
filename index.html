@@ -53,7 +53,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">PanopticRecon: Leverage Open-vocabulary Instance Segmentation for Zero-shot Panoptic Reconstruction</h1>
-            <div class="is-size-5 publication-authors">
+            <h1 class="is-size-4 publication-authors">IROS 2024 (Oral)</h1>
               <!-- Paper authors -->
               <span class="author-block"> 
                 <a href="https://scholar.google.com/citations?hl=zh-CN&user=4Ry3CKsAAAAJ" target="_blank">Xuan Yu</a>,</span>
@@ -110,7 +110,7 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Code(coming soon)</span>
                   </a>
                 </span>
 
@@ -139,7 +139,7 @@
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/网页视频1.mp4"
+        <source src="static/videos/result.mp4"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
@@ -158,7 +158,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            LiDAR Mapping has been a long-standing problem in robotics. Recent progress in neural implicit representation has brought new opportunities to robotic mapping. In this paper, we propose the multi-volume neural feature fields, called NF-Atlas, which bridge the neural feature volumes with pose graph optimization. By regarding the neural feature volume as pose graph nodes and the relative pose between volumes as pose graph edges, the entire neural feature field becomes both locally rigid and globally elastic. Locally, the neural feature volume employs a sparse feature Octree and a small MLP to encode the submap SDF with an option of semantics. Learning the map using this structure allows for end-to-end solving of maximum a posteriori (MAP) based probabilistic mapping. Globally, the map is built volume by volume independently, avoiding catastrophic forgetting when mapping incrementally. Furthermore, when a loop closure occurs, with the elastic pose graph based representation, only updating the origin of neural volumes is required without remapping. Finally, these functionalities of NF-Atlas are validated. Thanks to the sparsity and the optimization based formulation, NF-Atlas shows competitive performance in terms of accuracy, efficiency and memory usage on both simulation and real-world datasets.
+            Panoptic reconstruction is a challenging task in 3D scene understanding. However, most existing methods heavily rely on pre-trained semantic segmentation models and known 3D object bounding boxes for 3D panoptic segmentation, which is not available for in-the-wild scenes. In this paper, we propose a novel zero-shot panoptic reconstruction method from RGB-D images of scenes. For zero-shot segmentation, we leverage open-vocabulary instance segmentation, but it has to face partial labeling and instance association challenges. We tackle both challenges by propagating partial labels with the aid of dense generalized features and building a 3D instance graph for associating 2D instance IDs. Specifically, we exploit partial labels to learn a classifier for generalized semantic features to provide complete labels for scenes with dense distilled features. Moreover, we formulate instance association as a 3D instance graph segmentation problem, allowing us to fully utilize the scene geometry prior and all 2D instance masks to infer global unique pseudo 3D instance ID. Our method outperforms state-of-the-art methods on the indoor dataset ScanNet V2 and the outdoor dataset KITTI-360, demonstrating the effectiveness of our graph segmentation method and reconstruction network.
           </p>
         </div>
       </div>
@@ -287,16 +287,12 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-        @ARTICLE{10197558,
-              author={Yu, Xuan and Liu, Yili and Mao, Sitong and Zhou, Shunbo and Xiong, Rong and Liao, Yiyi and Wang, Yue},
-              journal={IEEE Robotics and Automation Letters}, 
-              title={NF-Atlas: Multi-Volume Neural Feature Fields for Large Scale LiDAR Mapping}, 
-              year={2023},
-              volume={8},
-              number={9},
-              pages={5870-5877},
-              doi={10.1109/LRA.2023.3300281}
-        }
+        @article{yu2024panopticrecon,
+          title={PanopticRecon: Leverage Open-vocabulary Instance Segmentation for Zero-shot Panoptic Reconstruction},
+          author={Yu, Xuan and Liu, Yili and Han, Chenrui and Mao, Sitong and Zhou, Shunbo and Xiong, Rong and Liao, Yiyi and Wang, Yue},
+          journal={arXiv preprint arXiv:2407.01349},
+          year={2024}
+          }
       </code></pre>
     </div>
 </section>
