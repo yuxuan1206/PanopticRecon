@@ -140,7 +140,7 @@
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/result.mp4"
+        <source src="static/videos/pre.mp4"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
@@ -169,45 +169,36 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/semantic.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          The center image shows the semantic reconstruction of the global map using LiDAR and semantic labels on Seq.00 of the KITTI-360. Several example volumes are shown in the map, among which the red and blue ones are highlighted with the surface details in the side images.
-        </h2>
+<section class="section">
+  <div class="container is-max-desktop">
+  <div class="columns is-centered">
+  <h2 class="title is-3">Approach Overview</h2>
+  <p></p>
+  </div></div>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- Visual Effects. -->
+      <div class="column">
+        <div class="content">
+          <img src="./static/images/pipeline.jpg" alt="Teaser" style="width:96%;">
+          <!-- <h3 class="title is-5 has-text-centered">Tangent Space Consistency</h3> -->
+          PanopticRecon consists of a reconstruction task and a segmentation task. The first step of the reconstruction task realizes the implicit surface reconstruction through RGB-D observations to provide the scene geometry for the segmentation task. Secondly, the segmentation task builds a graph from the normal of mesh, and infers 3D pseudo IDs to associate the 2D instance IDs by instance mask of Grounded SAM. In addition, 3D instance ID corrects some of the erroneous semantic labels. Then, the second reconstruction step realizes 2D-3D labeling supervised by consistent semantic and instance labels, and finally obtains the panoptic mesh, point cloud, and novel view images of the scene.        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/model.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          The architecture of the neural feature volume with an optional semantic branch
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/loop.png" height="60" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Bridge the neural feature volumes with pose graph optimization
-        </h2>
-      </div>
-<!--       <div class="item">
-        <!-- Your image here -->
-<!--         <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         .
-       </h2> -->
-<!--      </div> --> 
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+      <!--/ TSC. -->
 
+      <!-- <div class="column">
+        <div class="columns is-centered">
+          <div class="column content">
+          <img src="./static/images/neural_sdf_optimization.png" alt="Teaser" style="width:100%;">
+            <h3 class="title is-5 has-text-centered">Neural SDF Optimization</h3>
+              We project the surface point, found by sphere tracing, onto all views, and enforce the surface normal (i.e., SDF gradient) to be perpendicular to all tangents from visible views. We train the neural SDF with this TSC loss, silhouette, and Eikonal loss.
+          </div>
+
+        </div>
+      </div> -->
+    </div>
+    <!--/ Neural SDF Optimization. -->
+</section>  
 
 
 
