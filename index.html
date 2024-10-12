@@ -211,7 +211,7 @@
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <img src="./static/images/graph.jpg" alt="Teaser" style="width:96%;">
+          <img src="./static/images/graph.jpg" alt="Teaser" style="width:50%;">
           <h3 class="title is-5 has-text-centered">Graph Inference</h3>
           The points in the upper graph in \textbf{(a)} are the nodes (superpoints) of the graph. The color region corresponding to each node is the superface. We determine the nodes in an instance mask of a frame based on the overlap between the instance mask provided by Grounded SAM and the mask projected by the superface, and vote for the edges between the selected nodes. Similarly, we reduce the votes for the edges between nodes corresponding to masks of different instances in that frame. The edges with non-positive votes are finally cut and the nodes connected form an instance as shown in \textbf{(b)}. Once the 3D instance pseudo IDs are obtained, we associate 2D instance IDs while correcting incorrect semantic labels.      </div>
       <!--/ TSC. -->
@@ -219,7 +219,7 @@
       <div class="column">
         <div class="columns is-centered">
           <div class="column content">
-          <img src="./static/images/network.jpg" alt="Teaser" style="width:100%;">
+          <img src="./static/images/network.jpg" alt="Teaser" style="width:50%;">
             <h3 class="title is-5 has-text-centered">Network</h3>
             Based on the reconstruction architecture of a multi-level hash representation grid and small MLP, multi-branch joint optimization achieves multiple tasks of SDF reconstruction, appearance reconstruction, feature distillation, semantic segmentation, and instance segmentation. The loss function of the optimization process is not only the basic loss of SDF and color, but we also set the DINO-v2 feature vector L2-loss to unify the mesh features of similar objects or backgrounds and learn small classifiers targeting the mesh features through the cross-entropy loss of semantics and instances, to achieve the unsupervised situation of some regions due to blank labels to a certain extent.          </div>
 
